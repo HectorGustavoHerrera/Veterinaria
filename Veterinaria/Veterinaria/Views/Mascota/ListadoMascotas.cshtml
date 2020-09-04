@@ -1,0 +1,70 @@
+﻿@model IEnumerable<Veterinaria.Models.Mascota>
+@{
+    ViewBag.Title = "Listado de Mascotas";
+    //List<SelectListItem> items = (List<SelectListItem>)ViewBag.items;
+
+}
+@*//(13)Creamos una vista para la lista//*@
+@*//(17) agregamos una nueva columna a nuestra vista//*@
+<div class="row">
+    <div class="col-sm-12">
+        <div>
+            <h4>Listado de Mascotas cargadas de BD</h4>
+        </div>
+    </div>
+</div>
+
+
+
+<div class="row">
+    <div class="col-lg-6">
+        <table class="table table-bordered table-striped">
+            <thead>
+                <tr>
+                    <th class="text-center">
+                        NombreMascota
+                    </th>
+                    <th class="text-center">
+                        NombreDueño
+                    </th>
+                    <th class="text-center">
+                        Edad
+                    </th>
+                    <th class="text-center">
+                        Telefono
+                    </th>
+                    <th class="text-center">
+                        Acciones
+                    </th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var Mascota in Model)
+                {
+                <tr class="text-center">
+                    <td>
+                        @Mascota.NombreMascota1
+                    </td>
+                    <td>
+                        @Mascota.NombreDueño1
+                    </td>
+                    <td>
+                        @Mascota.Edad1
+                    </td>
+                    <td>
+                        @Mascota.Telefono1
+                    </td>
+                    <td>
+                        
+                    </td>
+                    <td>
+            <a href="@Url.Action("DatosMascotas","Mascota", new { @IdMascota=Mascota.Id1 })" class="btn btn-warning">Mostrar</a>
+            @*<a href="@Url.Action("EliminarPersona","Persona", new { @IdPersona = Personas.Id })" class="btn btn-danger">Eliminar</a>*@
+        </td>
+                </tr>
+                }
+            </tbody>
+        </table>
+    </div>
+</div>
+

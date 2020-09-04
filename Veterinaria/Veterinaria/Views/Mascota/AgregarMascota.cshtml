@@ -1,0 +1,70 @@
+﻿@model Veterinaria.Models.Mascota
+@{
+ViewBag.Title = "Agregar una nueva Mascota";
+//List<SelectListItem> items = (List<SelectListItem>)ViewBag.items;
+//(2)Creamos la vista//
+//(5)modificamos la vista de la compia con Modelo Mascota//
+}
+
+<div class="row">
+    <div class="col-sm-12">
+        <div>
+            <h4>Ingreso de Mascota</h4>
+        </div>
+    </div>
+</div>
+
+
+@using (Html.BeginForm())
+{
+    <div class="row">
+        <div class="col-lg-6">
+            <div class="form-horizontal">
+
+                <div class="form-group">
+                    <label class="col-sm-6 control-label">NombreMascota</label>
+                    <div class="col-sm-6">
+                        @Html.TextBoxFor(model => model.NombreMascota1, htmlAttributes: new { @class = "from-control" })
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label class="col-sm-6 control-label">NombreDueño</label>
+                    <div class="col-sm-6">
+                        @Html.TextBoxFor(model => model.NombreDueño1, htmlAttributes: new { @class = "from-control" })
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label class="col-sm-6 control-label">Edad</label>
+                    <div class="col-sm-6">
+                        @Html.TextBoxFor(model => model.Edad1, htmlAttributes: new { @class = "from-control" })
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="col-sm-6 control-label">Telefono</label>
+                    <div class="col-sm-6">
+                        @Html.TextBoxFor(model => model.Telefono1, htmlAttributes: new { @class = "from-control" })
+                    </div>
+                </div>
+
+
+                @*<div class="form-group">
+                    <label class="col-sm-6 control-label">Sexo :</label>
+                    <div class="col-sm-6">
+                        @Html.DropDownList("IdSexo", items, "Seleccione Sexo", htmlAttributes: new { @class = "from-control" })
+                    </div>
+                </div>*@
+
+
+                <div class="form-group text-right">
+                    <div class="col-xs-12">
+                        <button class="btn btn-primary" type="submit">
+                            Guardar Mascota
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+}
